@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/carousel.css">
+	<script src="/js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-sm">
+			<form id="main-form">
+				<div class="form-group">
+					<label for="exampleFormControlInput1">Email address</label>
+					<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+				</div>
+				<div class="form-group">
+					<label for="exampleFormControlSelect1">Example select</label>
+					<select class="form-control" id="exampleFormControlSelect1">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="exampleFormControlSelect2">Example multiple select</label>
+					<select multiple class="form-control" id="exampleFormControlSelect2">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="exampleFormControlTextarea1">Example textarea</label>
+					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+				</div>
+			</form>
+			<br>
+			<button id="submit_btn" type="button" class="btn btn-primary">Submit</button>
+		</div>
+	</div>
+</div>
+
+
+<br><br><br>
+
+<div class="replaceImages">
+	<img src="/img/kitty1.jpg" alt="кошка" title="кошка" data-id="500">
+	<img src="/img/kitty2.jpg" alt="кошка" data-id="501">
+	<img src="/img/kitty3.jpg" alt="кошка" title="кошка" data-id="505">
+	<img src="/img/parrot1.jpg" alt="попугай" data-id="523">
+	<img src="/img/parrot2.jpg" alt="попугай" data-id="525">
+	<img src="/img/parrot3.jpg" alt="попугай" data-id="535">
+</div>
+<br><br><br>
+<button id="fade_btn" type="button" class="btn btn-primary">Скрыть</button>
+<br><br><br>
+<hr>
+<div class="container">
+	<h1>ANIMATION</h1>
+	<div class="hideControlsImages">
+		<img src="/img/kitty1.jpg" alt="кошка" title="кошка" data-id="500">
+		<img src="/img/kitty2.jpg" alt="кошка" data-id="501">
+		<img src="/img/kitty3.jpg" alt="кошка" title="кошка" data-id="505">
+		<img src="/img/parrot1.jpg" alt="попугай" data-id="523">
+		<img src="/img/parrot2.jpg" alt="попугай" data-id="525">
+		<img src="/img/parrot3.jpg" alt="попугай" data-id="535">
+	</div>
+	<br><br><br>
+	<div class="hideControls">
+		<input value="1" type="checkbox"> - 1<br>
+		<input value="2" type="checkbox"> - 2<br>
+		<input value="3" type="checkbox"> - 3<br>
+		<input value="4" type="checkbox"> - 4<br>
+		<input value="5" type="checkbox"> - 5<br>
+		<input value="6" type="checkbox"> - 6<br>
+		<input type="button" value="Показать"class="btn btn-outline-primary">
+		<input type="button" value="Скрыть"class="btn btn-outline-primary">
+		<input type="button" value="Toggle"class="btn btn-outline-primary">
+		<input type="button" value="Stop"class="btn btn-outline-secondary">
+
+		<button value="small" class="btn btn-outline-success">Машстаб (уменьшить)</button>
+		<button value="big" class="btn btn-outline-success">Машстаб (увеличить)</button>
+	</div>
+</div>
+
+<br><br><br>
+<hr>
+
+<div class="carousel">
+	<i class="fas fa-arrow-left"></i>
+	<i class="fas fa-arrow-right"></i>
+	<ul>
+		<li><img src="/img/kitty1.jpg" height="400"></li>
+		<li><img src="/img/kitty2.jpg" height="400"></li>
+		<li><img src="/img/kitty3.jpg" height="400"></li>
+		<li><img src="/img/parrot1.jpg" height="400"></li>
+		<li><img src="/img/parrot2.jpg" height="400"></li>
+		<li><img src="/img/parrot3.jpg" height="400"></li>
+	</ul>
+
+</div>
+
+<br><br><br>
+<br><br><br>
+
+<script>
+
+	$('#submit_btn').click(function(){
+		const res = {};
+
+    res.email = $('#main-form input').val();
+    res.Example1 = $('#main-form select:first').val();
+    res.Example2 = $('#main-form select:last').val();
+    res.textArea = $('#main-form textarea').val();
+    $('#main-form').trigger('reset');
+    console.log('Form Result: ', res);
+	});
+
+
+
+  $('#main-form input').val('Привет мир!!!');
+
+
+
+  //////// $('#submit_btn').bind() - подписаться на события
+
+  // $('#submit_btn').bind('click dblclick', handler)
+  $('#submit_btn').bind('dblclick', function (event) { //
+    console.log('Нажали двойной клик');
+	})
+
+  // $('#submit_btn').unbind('click', callbackname) - отмена подписки на событие
+
+
+	/////// $(...).trigger( __event_name__, data) - запустить (симулировать) событие в браузере
+	// __event_name__ - имя события, которое хотим сгенерировать
+	// data - дополнительные данные, которые вы хотите кинуть в функцию-обработчик события
+	// эти данные попадут в функцию в качестве второго параметра
+
+
+	// $(document).ready( __callback__ ) - выполнить действие, когда вообще весь документы со всеми ресурсами загрузится
+	// $(document).load( __callback__ ) - выполнить действие, когда вообще документы загрузится
+
+	//////// проверить загрузку изображения
+
+	// const img1Src = '/img/dog7.jpg';
+	//
+  // $('<img>').bind('load', () => {
+  //   console.log('Картинка с песиком загружена!!!');
+	// }).bind('error', () => {
+  //   console.log('Ошибка загрузки картинки!!!');
+	// }).attr('src', img1Src);
+
+
+  function resizeImage() {
+    $('.replaceImages img').each(function (index, item) {
+			const maxWidth = 250;
+			const maxHeight = 200;
+			let ratio = 0;
+
+			const imageWidth = $(item).width();
+			const imageHeight = $(item).height();
+
+			if (imageWidth > maxWidth) {
+        ratio = maxWidth / imageWidth;
+        $(item).css({
+					width: maxWidth,
+					height: imageHeight * ratio,
+				});
+			}
+
+      console.log('Image:', $(item).attr('src'), imageWidth, imageHeight);
+			if (maxHeight > imageHeight) {
+        console.log('New:', imageWidth * ratio, maxHeight);
+
+        ratio = maxHeight / imageHeight;
+        $(item).css({
+          width: imageWidth * ratio,
+          height: maxHeight,
+        });
+			}
+		});
+	}
+
+	$(document).ready(resizeImage);
+
+  let imageVisibility = true;
+
+  $('#fade_btn').bind('click', function (){
+    console.log('In')
+		if (imageVisibility) {
+      $('.replaceImages img').fadeOut('slow');
+		} else {
+      $('.replaceImages img').fadeIn('slow');
+		}
+
+    imageVisibility = !imageVisibility;
+	})
+
+
+	/////////// АНИМАЦИЯ
+
+	/// $(...).show();  - показать элементы из выборки
+	/// $(...).hide(); - скрыть
+	/// $(...).toggle(); - переключить состояние видимый/невидимый
+
+  prepareAnimation6();
+
+
+
+
+  /////////////////////////////////////
+
+	function prepareAnimation1() {
+    $('.hideControlsImages img').width('200px');
+
+    $('.hideControls input[type="button"]').bind('click', (e) => {
+      const listOfCheckboxes = [];
+      const action = $(e.target).attr('value');
+      $(e.target).parent().find('input[type="checkbox"]').each((index, element) => {
+        if ($(element).prop('checked')) {
+          listOfCheckboxes.push($(element).attr('value'));
+				}
+        // listOfCheckboxes
+			})
+
+      const allImages = $('.hideControlsImages img');
+
+      function callbackAnimationFinished() {
+        console.log('>> AnimationFinished', this)
+			}
+
+      listOfCheckboxes.forEach((item) => {
+        if (action === 'Показать') {
+					$(allImages[item - 1]).show(3000, callbackAnimationFinished);
+        } else if (action === 'Скрыть') {
+          $(allImages[item - 1]).hide(3000);
+        } else if (action ===  'Stop') {
+          $(allImages[item - 1]).stop();
+        } else { // toggle
+          $(allImages[item - 1]).toggle('slow');
+        }
+			})
+
+      console.log('RESULT', listOfCheckboxes);
+
+		})
+	}
+
+
+	/////// FADE-IN / OUT
+	// войти или выйти из режима непрозрачности (css => opacity)
+
+  function prepareAnimation2() {
+    $('.hideControlsImages img').width('200px');
+
+    $('.hideControls input[type="button"]').bind('click', (e) => {
+      const listOfCheckboxes = [];
+      const action = $(e.target).attr('value');
+      $(e.target).parent().find('input[type="checkbox"]').each((index, element) => {
+        if ($(element).prop('checked')) {
+          listOfCheckboxes.push($(element).attr('value'));
+        }
+        // listOfCheckboxes
+      })
+
+      const allImages = $('.hideControlsImages img');
+
+      function callbackAnimationFinished() {
+        console.log('>> AnimationFinished', this)
+      }
+
+      listOfCheckboxes.forEach((item) => {
+        if (action === 'Показать') {
+          $(allImages[item - 1]).fadeIn(1700, callbackAnimationFinished);
+        } else if (action ===  'Stop') {
+          $(allImages[item - 1]).stop();
+        } else if (action === 'Скрыть') {
+          $(allImages[item - 1]).fadeOut(1700);
+        }
+      })
+
+      console.log('RESULT', listOfCheckboxes);
+
+    })
+  }
+
+  ///////// slideUp / slideDown - манипуляции с прозрачностью и вертикальным размером
+	// с поледующим скрытием элемента (display: none)
+  function prepareAnimation3() {
+    $('.hideControlsImages img').width('200px');
+
+    $('.hideControls input[type="button"]').bind('click', (e) => {
+      const listOfCheckboxes = [];
+      const action = $(e.target).attr('value');
+      $(e.target).parent().find('input[type="checkbox"]').each((index, element) => {
+        if ($(element).prop('checked')) {
+          listOfCheckboxes.push($(element).attr('value'));
+        }
+        // listOfCheckboxes
+      })
+
+      const allImages = $('.hideControlsImages img');
+
+      function callbackAnimationFinished() {
+        console.log('>> AnimationFinished', this)
+      }
+
+      listOfCheckboxes.forEach((item) => {
+        if (action === 'Показать') {
+          $(allImages[item - 1]).slideDown(3000, callbackAnimationFinished);
+        } else if (action === 'Скрыть') {
+          $(allImages[item - 1]).slideUp(3000);
+        } else if (action ===  'Stop') {
+          $(allImages[item - 1]).stop();
+				} else { // toggle
+          $(allImages[item - 1]).slideToggle('slow');
+        }
+      })
+
+      console.log('RESULT', listOfCheckboxes);
+
+    })
+  }
+
+  ////// Animate - персональные характиристики анимации
+	//  $(...).animate(props, duration, easing, callback)
+	// параметры:
+	// - props - объект с конечными значениями для анимации
+	// - duration - длительность в млсек, либо slow/fast
+	// - easing = linear, swing
+
+
+	/// эффект масштабирования
+
+	function scaleBy2(elements, type = 'small') {
+		$(elements).each(function () {
+
+		  const newWidth = type === 'small' ? $(this).width() / 2 : $(this).width() * 2
+		  const newHeight = type === 'small' ? $(this).height() / 2 : $(this).height() * 2
+
+		  $(this).animate({
+				width: newWidth,
+				height: newHeight,
+			}, 2000);
+		})
+	}
+
+
+  function prepareAnimation4() { // Scaling
+    $('.hideControlsImages img').width('200px');
+
+    $('.hideControls button').bind('click', (e) => {
+      const listOfCheckboxes = [];
+      const action = $(e.target).attr('value');
+      $(e.target).parent().find('input[type="checkbox"]').each((index, element) => {
+        if ($(element).prop('checked')) {
+          listOfCheckboxes.push($(element).attr('value'));
+        }
+        // listOfCheckboxes
+      })
+
+      const allImages = $('.hideControlsImages img');
+
+      function callbackAnimationFinished() {
+        console.log('>> AnimationFinished', this)
+      }
+
+
+
+      listOfCheckboxes.forEach((item) => {
+        scaleBy2(allImages[item - 1], action);
+			});
+
+
+      console.log('RESULT', listOfCheckboxes);
+
+    })
+  }
+
+
+  /////////
+
+	function fallDown(elements) {
+	  $(elements).each(function(){
+	    console.log("New POS", $(window).height() - $(this).height())
+	    console.log("New top ", $(window).height() - $(this).height())
+			$(this)
+				.css({position: 'relative'})
+				.animate({
+					opacity: 0,
+					top: $(window).height() - $(this).height() - $(this).position().top,
+				}, 1500, function (){
+				  $(this).hide();
+				})
+		});
+
+	}
+
+
+  function prepareAnimation5() { // Scaling
+    $('.hideControlsImages img').width('200px');
+
+    $('.hideControls button').bind('click', (e) => {
+      const listOfCheckboxes = [];
+      const action = $(e.target).attr('value');
+      $(e.target).parent().find('input[type="checkbox"]').each((index, element) => {
+        if ($(element).prop('checked')) {
+          listOfCheckboxes.push($(element).attr('value'));
+        }
+        // listOfCheckboxes
+      })
+
+      const allImages = $('.hideControlsImages img');
+
+      listOfCheckboxes.forEach((item) => {
+        fallDown(allImages[item - 1], action);
+      });
+
+
+      console.log('RESULT', listOfCheckboxes);
+
+    })
+  }
+
+
+  ////////////
+
+	function scatterImages(elements) {
+		$(elements).each(function (){
+		  const position = $(this).position();
+
+		  $(this).css({
+				position: 'absolute',
+				top: position.top,
+				left: position.left,
+			}).animate({
+				opacity: 'hide',
+				width: $(this).width() * 5,
+				height: $(this).height() * 5,
+				top: position.top - $(this).height() * 5 / 2,
+				left: position.left - $(this).width() * 5 / 2,
+			}, 'slow')
+		})
+
+	}
+
+
+  function prepareAnimation6() { // Scaling
+    $('.hideControlsImages img').width('200px');
+
+    $('.hideControls button').bind('click', (e) => {
+      const listOfCheckboxes = [];
+      const action = $(e.target).attr('value');
+      $(e.target).parent().find('input[type="checkbox"]').each((index, element) => {
+        if ($(element).prop('checked')) {
+          listOfCheckboxes.push($(element).attr('value'));
+        }
+        // listOfCheckboxes
+      })
+
+      const allImages = $('.hideControlsImages img');
+
+      listOfCheckboxes.forEach((item) => {
+        scatterImages(allImages[item - 1]);
+      });
+
+
+      console.log('RESULT', listOfCheckboxes);
+
+    })
+  }
+
+
+
+  //////////////////
+
+	const STATE = {
+	  currentImg: 0,
+	}
+
+
+	function swipeLeft() {
+	  let curImgWidth = 0;
+	  let curImgLeft = 0;
+	  let curImgLeftOffset = 0;
+
+	  let jobDone = false;
+		console.log('Clicked Left')
+		$('.carousel li').each(function (index) {
+		  if (index == STATE.currentImg) {
+        curImgWidth = $(this).width();
+        curImgLeft = $(this).position().left;
+        curImgLeftOffset = $(this).offset().left;
+        console.log('img pos', this, curImgLeft, curImgLeftOffset)
+        $(this)
+					.css({left: curImgLeftOffset, position: 'absolute'})
+					.animate({
+						left: -curImgWidth,
+						opacity: 0,
+				}
+				, 'slow',
+            function () {
+              $(this).hide();
+            });
+        jobDone = true;
+			}
+		})
+
+		if (jobDone) {
+      STATE.currentImg++;
+      // images: [''],
+		}
+	}
+
+	function swipeRight() {
+	  let curImgWidth = 0;
+	  let curImgLeft = 0;
+	  let curImgLeftOffset = 0;
+
+	  let jobDone = false;
+		console.log('Clicked Right')
+		$('.carousel li').each(function (index) {
+		  if (index == STATE.currentImg) {
+        curImgWidth = $(this).width();
+        curImgLeft = $(this).position().left;
+        curImgLeftOffset = $(this).offset().left;
+        console.log('img pos', this, curImgLeft, curImgLeftOffset)
+        $(this)
+					.css({left: curImgLeftOffset, position: 'absolute'})
+					.animate({
+						left: curImgWidth,
+						opacity: 0,
+				},
+					'slow',
+					function () {
+					  	$(this).hide();
+					});
+        jobDone = true;
+			}
+		})
+
+		if (jobDone) {
+      STATE.currentImg++;
+		}
+	}
+
+
+	function prepareCaruosel() {
+		$('.carousel i')
+			.filter('.fa-arrow-left')
+			.bind('click', swipeLeft)
+			.end()
+      .filter('.fa-arrow-right')
+      .bind('click', swipeRight);
+	}
+
+  prepareCaruosel();
+
+</script>
+
+</body>
+</html>

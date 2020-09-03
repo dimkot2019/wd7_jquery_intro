@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Простые задания jQuery.</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="profile" href="http://gmpg.org/xfn/11"/>
+    <link rel="stylesheet" href="/css/styles.css">
+
+	<script src="/js/jquery-3.5.1.min.js"></script>
+
+</head>
+<body>
+<h2>sakchsg</h2>
+<h2>sjjjas</h2>
+<h2>djhgzjdv</h2>
+<h2>djhgzjdv</h2>
+<h2>djhgzjdv</h2>
+
+<a href="http://yandex.ru">sdhvkl</a><br>
+<a href="http://mail.ru">sajkhcga</a><br>
+<a class="www" href="http://google.com">jshg</a>
+
+<br><br>
+<hr>
+	<ul>
+		<li>Странным летом этого года кинотеатр</li>
+		<li>«Гаража» открывает сезон значительно позже</li>
+		<li>чем привык</li>
+		<li>Любители фестивального кино успели</li>
+    </ul>
+    
+    <ul2>
+		<li class="www">по нему истосковаться</li>
+		<li class="www">Фестиваль документального кино</li>
+		<li class="www">новой культуре ежегодно обещает</li>
+		<li class="www">в которой интересное</li>
+		<li class="www">Культурная жизнь возвращается</li>
+    </ul2>
+    <hr>
+    <form id="k-form">
+        <div>
+            <label>Ввод текста</label><br>
+            <input type="text" class="in">
+        </div>
+        <hr>
+        <div>
+            <label>Ввод в textarea</label><br>
+            <textarea class="text" rows="3"></textarea>
+        </div>
+        
+    </form>
+    <br>
+            <button id="_btn" type="button">Submit</button>
+    <hr>
+    <div class="container">
+        <input  type="checkbox" checked> ffhfhg <br>
+        <input  type="checkbox" checked> hgfhgg <br>
+        <input  type="checkbox"> jygggf <br>
+    
+    </div>
+    <hr>
+    <div class="container2">
+        <input  type="checkbox"> ffhfhg <br>
+        <input  type="checkbox"> hgfhgg <br>
+        <input  type="checkbox" checked> jygggf <br>
+        <input  type="checkbox" checked> jygggf <br>
+    </div>
+    <br><br><br>
+    <div class="wrapper" style="width: 900px; height: 180px; padding: 10px;">
+        Due to the widespread use of tables across third-party widgets like calendars and date pickers, we’ve designed our tables to be opt-in. Just add the base class .table to any, then extend with custom styles or our various included modifier classes.
+        Due to the widespread use of tables across third-party widgets like calendars and date pickers, we’ve designed our tables to be opt-in. Just add the base class .table to any, then extend with custom styles or our various included modifier classes.
+    </div>
+    <br><br><br><br>
+    <div class="wrapper" style="width: 700px; height: 70px; border: 1px solid red;">
+        Due to the widespread use of tables across third-party widgets like calendars and date pickers, we’ve designed our tables to be opt-in. Just add the base class .table to any.
+    </div>
+    <br><br>
+    <div class="wrapper" style="width: 700px; height: 70px;">
+        Due to the widespread use of tables across third-party widgets like calendars and date pickers, we’ve designed our tables to be opt-in. Just add the .
+    </div>
+    <br><br>
+    <hr>
+    <div class="imageZoomInZoomOut">
+
+    </div>
+    <br>
+    <hr>
+    <div class="fleeingMouse">
+
+    </div>        
+
+
+<script>
+
+    //Простые задания jQuery.
+
+  //1.Оберните каждый <h2> в <div>.
+    
+   $('h2').wrap('<div>');
+
+  //2.Оберните каждый <h2> в <div> с классом test.
+
+   $('div:has(h2)').addClass('test');
+
+  //3.Оберните каждый <h2> внутри в <i>.
+    
+   $('div h2').wrap('<i>');
+
+  //4. Внутри каждого <h2> в начале вставьте '!'.  
+    
+   $('.test h2').each((index, item) => {
+       $(item).html(`!${ item.innerText }`)
+   });
+
+   //5. Внутри каждого <h2> в конце вставьте '?'.
+    
+   $('.test h2').each((index, item) => {
+       $(item).html(`${ item.innerText }?`);
+   });
+
+   //6.Удалите все <h2>.
+    
+   $('.test h2').remove();
+
+   //7.Сделайте все <h2> пустыми.
+
+   $('.test h2').empty();
+   
+   //8.Замените href каждой ссылки на '!'.
+   
+   $('a').attr('href', '!');
+
+   //9.Добавьте каждой ссылке атрибут target='_blank'.
+
+   $('a').attr('target', '_blank');
+
+   //10.Замените содержимое каждой ссылки (анкоры) на их href.
+   
+   $('a').each((index, item) => {
+       item.innerText = $($('a').get(index)).attr('href');
+       $(item).html(`${ item.innerText }`);  
+   });
+
+   //11.Вставьте после содержимого каждой ссылки их href в круглых скобках.
+
+   $('a').each((index, item) => {
+       $(item).html(`${ item.innerText }( ${ $($('a').get(index)).attr('href') } )`);  
+   });
+
+   //12. Добавьте всем li класс test.
+
+   $('ul li').addClass('test');
+
+   //13.Удалите у li класс www.
+   
+   $('ul2 li').removeClass();
+
+   //14. Добавьте всем li класс www, если его нет, и удалите, если есть. 
+   
+   ifThereIsAClassThenDeleteItAndViceVersa ();
+   function ifThereIsAClassThenDeleteItAndViceVersa () {
+      if (!($('ul2 li').is('.www'))) {
+      $('ul2 li').addClass('www');
+      } else {
+      $('ul2 li').removeClass('www');
+      }
+   }
+   
+   //15. Проверьте, что хотя бы одна из ссылок имеет класс www. 
+   
+   $('a').is('.www');
+
+   //16.Выведите value инпута с классом in.
+   
+   $('.in').val();
+
+   //17. Выведите содержимое textarea с классом text.
+
+   $('.text').val();
+
+   //18. Выведите последовательно value каждого инпута.
+
+   $('.in').val(), $('.text').val();
+
+   //19.Установите value всех инпутов в '!'.
+
+   $('.in').val('!');
+   $('.text').val('!');
+
+   //20. В value всех инпутов с классом number находятся числа. Сделайте так, чтобы в них стали квадраты этих чисел.
+
+   $('#_btn').click(function(){
+        let text = $('.in').val();
+        let textArea = $('.text').val();
+        $('#k-form').trigger('reset');
+        $('.in').val(`${ (text) ** 2 }`);
+        $('.text').val(`${ (textArea) ** 2 }`);
+   });
+    
+   //21.Установите все отмеченные чекбоксы в неотмеченные.
+
+   $('.container input[checked]').prop('checked', false);
+
+   //22. Установите все неотмеченные чекбоксы в отмеченные.
+
+   $('.container2 input[type="checkbox"]').prop('checked', true);
+
+   //23. Установите все отмеченные чекбоксы в неотмеченные и наоборот.
+    
+    const check = $('.container input[checked]');
+    $(check).prop('checked', false);
+    $(check).prop('checked', true);
+
+   //24. Сделайте неотмеченным последний чекбокс на странице.
+    
+    const checkLast = $('input[type="checkbox"]:last');
+    $(checkLast).prop('checked', false);
+
+   //25. Узнайте ширину и высоту первого, второго и третьего дивов <div> (по очереди) 
+   //    непосредственно внутри #wrapper без учета padding и границы.
+
+    let res = [];
+    $('.wrapper').each(function() {
+       const width = $(this).width();
+       const height = $(this).height();
+       res.push(width);
+       res.push(height);
+    });
+    console.log(res);
+
+   //26.То же самое с учетом padding.
+    
+    let res2 = [];
+    $('.wrapper').each(function() {
+       const width = $(this).innerWidth();
+       const height = $(this).innerHeight();
+       res2.push(width);
+       res2.push(height);
+    });
+    console.log(res2);
+
+   //27. То же самое с учетом padding и границы.
+    
+    let res3 = [];
+    $('.wrapper').each(function() {
+       const width = $(this).outerWidth();
+       const height = $(this).outerHeight();
+       res3.push(width);
+       res3.push(height);
+    });
+    console.log(res3);
+
+   //Домашнее задание.Задача 1
+   //Необходимо реализовать js код с использованием jquery, результатом которого будет следующее. 
+   //У вас есть элемент, которому указан задний фон в виде картинки. Добавьте две кнопки (+/-), 
+   //которые позволят менять размер картинки по нажатию.
+   //При нажатии на кнопку + происходит zoom in, при нажатии на -, zoom out..
+    
+   $(document).ready(() => {
+        $('<div></div>').addClass('imageZoomInZoomOut');
+        $('.imageZoomInZoomOut').append($('<img>', {src: '/img/kitty.png'}).addClass('kitty'));
+        $('.imageZoomInZoomOut').append($('<button><i class="fa fa-plus" aria-hidden="true"></i></button>').on('click', () => {
+            $('img').css({width: '500px'});
+        }));
+        $('.imageZoomInZoomOut').append($('<button><i class="fa fa-minus" aria-hidden="true"></i></button>').on('click', () => {
+            $('img').css({width: '350px'});
+        }));
+   });
+
+   //Домашнее задание. Задача 2
+   //Необходимо реализовать js код с использованием jquery, результатом которого будет следующее. 
+   //Квадратик (div) убегающий от мыши. При наведении на элемент, он должен рандомно менять свою позицию, оставаясь в поле зрения.
+
+	$(document).ready(() => {
+        $('.fleeingMouse')
+            .on('mouseover', (e) => {
+            const mg = Math.floor(Math.random() * 100);
+            $(e.target).hide();
+            $(e.target).show().css({margin: `${ mg }px`});   
+        });
+    });
+
+</script>
+
+
+</body>
+</html>

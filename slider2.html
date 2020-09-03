@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slider</title>
+	<script src="/js/jquery-3.5.1.min.js"></script>
+	<script src="/js/carousel2.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/carousel2.css">
+
+</head>
+<body>
+
+<h1>Horizontal Slider</h1>
+<br>
+<!--div class="carousel">
+	<div class="carousel__container">
+		<ul class="carousel__list">
+			<li class="carousel__item"><img src="/img/kitty1.jpg"></li>
+			<li class="carousel__item"><img src="/img/kitty2.jpg" ></li>
+			<li class="carousel__item"><img src="/img/kitty3.jpg" ></li>
+			<li class="carousel__item"><img src="/img/parrot1.jpg" ></li>
+			<li class="carousel__item"><img src="/img/parrot2.jpg" ></li>
+			<li class="carousel__item"><img src="/img/parrot3.jpg" ></li>
+			<li class="carousel__item"><img src="/img/kitty1.jpg"></li>
+			<li class="carousel__item"><img src="/img/kitty2.jpg" ></li>
+		</ul>
+		<i class="fas fa-arrow-left"></i>
+		<i class="fas fa-arrow-right"></i>
+	</div>
+</div-->
+
+
+<div id="carousel"></div>
+
+
+<script>
+
+	/*
+  // $('<img>').load(()=>{}) - deprecated since v.1.7
+  $('<img>')
+		.on('load', function() {
+    	console.log('Success');
+    	$(this).appendTo($('body'));
+  	    })
+        .on('error', function () {
+        console.log('Error');
+		})
+       .attr('src', '/img/dog100.jpg')
+	// */
+
+
+
+	$(document).ready(() => {
+
+	  const list = [
+	    '/img/dog1.jpg',
+	    '/img/dog2.jpg',
+	    '/img/dog3.jpg',
+	    '/img/kitty1.jpg',
+	    '/img/kitty2.jpg',
+	    '/img/kitty3.jpg',
+	    '/img/parrot1.jpg',
+	    '/img/parrot2.jpg',
+	    '/img/parrot3.jpg',
+		];
+
+
+    $('#carousel').myCarousel(list);
+	})
+
+  /*$(document).ready(function() {
+    const leftBtn = $('.carousel .fa-arrow-left');
+    const rightBtn = $('.carousel .fa-arrow-right');
+    const imgList = $('.carousel .carousel__list');
+    const totalImages = imgList.find('li').length; // сколько всего картинок в карусели
+    let currentLeft = 0; // смещение блока с картинками для отображения активной картинки
+    const oneImagePadding = 30 + 2;
+    const oneImageWidth = 200 + oneImagePadding;
+    let activeImage = 1;
+    leftBtn.on('click', function() {
+      if (activeImage > 1 ) {
+        currentLeft += oneImageWidth;
+        imgList.animate({ left : `${currentLeft}px`}, 200);
+        activeImage--;
+      }
+    });
+    
+    rightBtn.on('click', function() {
+      if (activeImage < totalImages) {
+        currentLeft -= oneImageWidth;
+        imgList.animate({ left : `${currentLeft}px`}, 200);
+        activeImage++;
+      }
+    });
+  });
+  /// $().Carusel('.carousel') */
+
+
+</script>
+</body>
+</html>

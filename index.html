@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Page Title</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="profile" href="http://gmpg.org/xfn/11"/>
+	<link rel="stylesheet" href="/css/styles.css">
+
+	<script src="/js/jquery-3.5.1.min.js"></script>
+	
+
+</head>
+<body>
+   
+	<div class="goToTop">
+		<i class="fas fa-arrow-alt-circle-up"></i>
+	</div>
+
+	<div id="content" class="wrapper box">
+		<hgroup>
+			<h1>Page Title</h1>
+			<h2>Page Description</h2>
+			
+		</hgroup>
+		<article>
+			<h2>Article Title</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+				Nunc urna metus, ultricies eu, congue vel, laoreet...
+			</p>
+		</article>
+		<article>
+			<h2>Article Title</h2>
+				<p>
+					Morbi malesuada, ante at feugiat tincidunt, enim massa
+					gravida metus, commodo lacinia massa diam vel eros...
+				</p>
+		</article>
+		<h2>Article Third Title</h2>
+		<footer class="superFooter">&copy;Footer 1:: copyright 2012</footer>
+		<footer class="superFooter">&copy;FOTER 2:: copyright 2012</footer>
+	  <!-- ВОТ СЮДА ВСТАВИТСЯ КАРТИНКА ЧЕРЕЗ JQUERY на строке 161 (см ниже) -->
+	</div>
+	<hr>
+
+	<div class="images-ex1">
+		<img src="/img/kitty1.jpg" alt="кошка" title="кошка" data-id="500">
+		<img src="/img/kitty2.jpg" alt="кошка" data-id="501">
+		<img src="/img/kitty3.jpg" alt="кошка" title="кошка" data-id="505">
+		<br><br>
+		<img src="/img/dog1.jpg" alt="собака" data-id="510">
+		<img src="/img/dog2.jpg" alt="собака" data-id="520">
+		<img src="/img/dog3.jpg" alt="собака" data-id="530">
+		<br><br>
+		<img src="/img/parrot1.jpg" alt="попугай" data-id="523">
+		<img src="/img/parrot2.jpg" alt="попугай" data-id="525">
+		<img src="/img/parrot3.jpg" alt="попугай" data-id="535">
+
+	</div>
+	<hr>
+
+	<div class="images-ex2">
+		<p>Культурная жизнь возвращается, <i>так что в августе мы отправляемся не только в парки на пикники</i>, но еще в кинотеатры, театры и на концерты</p>
+		<br>
+		<span>Some text</span>
+		<p>Фестиваль документального кино о <u id="underlinedText">новой культуре ежегодно обещает программу, в которой интересное</u> для себя найдет каждый, и своего слова пока не нарушил ни разу. Диапазон тем широк. Здесь и музыка (с которой, кстати, Beat Film Festival как раз начинался), и программа, емко озаглавленная «Наперекор», чьи герои бросают вызов времени, людям и обстоятельствам, и современное искусство (в центре внимания — загадочный Бэнкси), и мода, и литература, и много чего еще.</p>
+		<br>
+		<span>Some other text</span>
+		<p>Странным летом этого года кинотеатр <b>«Гаража» открывает сезон значительно позже, чем привык</b>. Любители фестивального кино успели по нему истосковаться, чего и не скрывают. Расписание Garage Screen заслуживает самого пристального изучения. Среди премьер — работа Пьетро Марчелло «Мартин Иден», в которой местом действия взятого за основу сюжета романа Джека Лондона оказывается итальянский Неаполь.</p>
+		sdfsdfsdfsdf
+	</div>
+	<hr>
+	<ul class="listOfQ">
+		<li class="s1">Странным летом этого года кинотеатр</li>
+		<li>«Гаража» открывает сезон значительно позже</li>
+		<li >чем привык</li>
+		<li>Любители фестивального кино успели</li>
+		<li>по нему истосковаться</li>
+		<li class="s1">Фестиваль документального кино</li>
+		<li>новой культуре ежегодно обещает</li>
+		<li id="someLiID">в которой интересное</li>
+		<li class="s1">Культурная жизнь возвращается</li>
+
+	</ul>
+
+	<hr>
+	<div class="example5">
+		<h1>Фестиваль документального кино</h1>
+		<h1>Странным летом этого года кинотеатр</h1>
+		<h2>Культурная жизнь возвращается</h2>
+		<h2>Любители фестивального кино успели</h2>
+		<h3>Культурная жизнь возвращается</h3>
+		<h3>новой культуре ежегодно обещает программ</h3>
+
+
+	</div>
+
+	<hr>
+
+	<div class="example6">
+		<h3>Фестиваль документального кино</h3>
+		<h3 class="zzz" data-id="secret value">Странным летом этого года кинотеатр</h3>
+		<h3>Культурная жизнь возвращается</h3>
+		<h3>Любители фестивального кино успели</h3>
+		<h3 class="ccc">Культурная жизнь возвращается</h3>
+		<h3>новой культуре ежегодно обещает программ</h3>
+	</div>
+
+
+	<ul class="markNumbers">
+		<li>Durations are given in milliseconds</li>
+		<li>higher values indicate slower animations</li>
+		<li>not faster ones</li>
+		<li>The default duration is 400</li>
+		<li>The strings 'fast' and 'slow'</li>
+		<li>can be supplied to indicate durations </li>
+		<li>of 200 and 600 milliseconds</li>
+	</ul>
+
+
+	<div class="wrapEx">
+		<span>Фестиваль документального кино</span>
+		<span class="zzz" data-id="secret value">Странным летом этого года кинотеатр</span>
+		<span>Культурная жизнь возвращается</span>
+		<span>Любители фестивального кино успели</span>
+		<span class="ccc">Культурная жизнь возвращается</span>
+		<span>новой культуре ежегодно обещает программ</span>
+	</div>
+
+<script>
+
+	$('.superFooter')
+		.addClass('super-red')
+		.addClass('decorate');
+
+  initBackToTopScroller();
+
+
+  function initBackToTopScroller() {
+
+    $('.goToTop').on('click', function (e){
+
+      $('html, body').animate({scrollTop: 0}, 'fast');
+
+    });
+
+  }
+
+
+
+  // document.querySelector('.superFooter').classList.add('super-red');
+	// document.querySelectorAll('.superFooter').classList.add('super-red');
+  // IE = classList
+	// Safari = classes
+	// Opera = class
+
+	// console.log('Jquery:',  $('.superFooter') );
+
+	// const clicker = () => console.log('clicked');
+	// document.getElementById('content').addEventListener('click', clicker)
+	// document.getElementById('content').removeEventListener('click', clicker)
+
+	// Селекторы
+
+	// $('*') - выбрать все элементы
+	// $('h1') - выбрать какой-то конкретный html тег
+	// $('.className') - выбрать элемент(ы) с именем класса
+	// $('.className1.className2') - выбрать элемент(ы) у которых одновременно 2 класса: .className1.className2
+	// $('#identifire') - выбрать элемент с определенным идентификатором
+
+	// $('h1 span') - выбрать элемент предок-потомок: span находится внутри h1
+	// $('h1 > span') - выбрать элемент с непосредственным ребенком, т.е. span должен быть
+	// именно на первом уровне вложенности внутри h1
+
+  // $('h1 + span') - выбрать из всех соседних узлов, только те span, которые идут сразу за h1
+
+	// $('h1 ~ span') - выбрать все элементы span, находящиеся на одном уровне с предыдущим элементом h1
+
+	// $(':first') первый элемент из всей выборки
+	// $(':last') последний элемент из всей выборки
+
+	// $(':not([])') инверсия поиска
+	// $('img:not([alt])') - найдет картинки у которых не задан атрибут ALT
+
+	// $(':even') - найти все элементы с четными индексами
+	// $(':odd') - найти все элементы с НЕ четными индексами
+
+	// $(':eq(7)') - найти элемент с индексом 7
+
+	// $(':gt(4)') - greater -> найти элемент у которого индекс больше 4
+	// $(':lt(4)') - lower ->  -> найти элемент у которого индекс меньше 4
+
+	// $(':header') - найти все теги h1-h6
+	// $('h1,h2,h3,h4,h5,h6') - найти все теги h1-h6
+
+  // $(':animated') - найти все элементы, у которых в данный момент есть CSS анимация
+
+	// $(':focus') - найти элемент на котором находится фокус ввода
+
+	// $(':contains("какой-то текст")') - найти элемент найти элементы содержащие определенный текст
+
+	// $(':empty') - найти элементы у которых нет детей
+
+	// $(':parent') - найти элемент, который является родителем для текущего (ей выборки)
+
+	// $(':has("селектор")') - найти элементы, которые содержат то, что передали в скобках
+	// $('div:has(p)') - найти все DIV, у которых есть ребенок P
+
+	// $(':visible') - найти все видимые элементы
+	// $(':hidden') - найти все скрытые элементы
+	// display, visibility ~> true/false
+
+
+  // $('<div>') - просто создать пустой тег DIV
+	// $('<div></div>') - просто создать пустой тег DIV
+  // $('<div>Текстовая информация <p>вложенный текст</p></div>')
+
+	const allH2 = $('h2');
+
+console.log("Find children size = ", allH2.length); // длинна массива выборки
+// console.log("Find children size = ", allH2.size()); // длинна массива выборки - удален из 3й версии
+
+	console.log("third H2 = ", allH2[2]); // получу элемент из выборки с индексом 2
+	console.log("second H2 = ", allH2.get(1)); // если выйти за границы выборки, то поиск осуществляется
+	// зацикленно по кругу, если уходит в минус значит поиск перейдет на конец выборки
+
+	// $($('h2').get[0])
+  // $('h2').eq(0)
+
+	// $('h2').first() -> $('h2:first')
+	// $('h2').last() -> $('h2:last')
+
+	// console.log($('h2'));
+	console.log($('h2').toArray()); // перевести выборку в обычный плоский JavaScript массив
+	// без дополнительной функциональности jQuery
+
+	// $().add(...) - метод добавления чего-то в ранее созданную выборку
+	// $('img[alt], img[title]') - вариант №1
+
+	// $('img[alt]).add('img[title]', '.table_stripped') - вариант №3 - 2й параметр метода - это область для ограничения
+	// т.е. селектор, который является контекстом исполнения поиска, т.е. сначала находим таблицу с классом table_stripped
+	// потом внутри этой таблицы ищем уже картинки img с атрибутом title
+
+
+	$('.images-ex1 img').css('width', '200px');
+
+  // $('.images-ex1 img[alt="кошка"]').add('img[alt="попугай"]').css('border', '5px solid green');
+	// $('img[alt="кошка"]', '.images-ex1').add('img[alt="попугай"]', '.images-ex1').css('border', '5px solid red');
+
+	// $(...).not(...) убирает из ранее полученной выборки то, что ему передано в качестве селектора (параметр метода)
+	// $('img[alt]', '.images-ex1').not('img[alt="попугай"]').css('border', '5px solid pink');
+
+	// $(...).filter(...) - фильтрует содиержимое выборки
+  // $('.images-ex1 img').filter('img[alt="попугай"]').css('border', '5px solid green');
+  // $('.images-ex1 img').filter(function () {
+  //   // функция фильтрации должна вернуть true/false - если тру, тогда элемент остается в выборке,
+	// 	// если фолз тогда элемент удаляется из выборки
+	// 	return $(this).is('img[alt="попугай"]');
+	//
+	// }).css('border', '5px solid red');
+
+  // $(...).slice(begin, end) - делает копию из выборки, ограничивая begin - начало и end - конец
+	// begin, end - индексы в массиве (от 0)
+	// end - необязательный параметр, если не указан, тогда копируется до конца
+
+  // $('.images-ex1 img').slice(3, 6).css('border', '5px solid green');
+
+  // $(...).has(...) - найдет детей удовлетворяющих селектору внутри has, который (дети) находятся в родителе из
+	// ранее полученной выборки
+
+	// $('.images-ex2 p').has('i').css('color', 'green');
+	const pWithI = $('.images-ex2 p').has('i');
+  pWithI.css('color', 'green');
+	// почти такой поиск $('.images-ex2 p i').css('color', 'green'), только тут будет найден сам по себе тег <i> внутри параграфа
+	// а если юзать .has('i'), то мы получаем доступ к родителю, т.е. к параграфу, внтри котороего есть <i>
+
+	// $(...).map(...) - делает обход и создает копию выборки, копия состоит из того, что вернет колбэк, который
+	// мы перердаем на вход map()
+  $('.images-ex1 img').map(function (index, item) {
+    console.log('searching', index, item);
+    return this.title ? this : null
+	}).css('border', '5px solid violet');
+
+  // $(...).each(...) - делает тоже самое что и map, только не создает массив с результатами колбэка
+	const imageDataID = [];
+  $('.images-ex1 img').each((index, item) => {
+    imageDataID.push(item.getAttribute('data-id'));
+	});
+
+  console.log('Все data-id для картинок:', imageDataID)
+
+
+
+	/// Получение набора из ранее сделанной выборки, на основе взаимоотношения
+	// find() - ищет детей, которые удовлетворяют условию селектора, из ранее сделанной выборки
+
+  // $('.images-ex2').find('p b').css('color', 'violet');
+
+  // closest() - ищет родителя, который удовлетворяет условию поиска
+
+	// $('#underlinedText').closest('p').css('color', 'yellow');
+
+
+	// children() - ищет среди детей, которые удовлетворяет условию поиска
+
+  // $('.images-ex2').children('p').css('color', 'violet');
+
+  /// contents() - получает доступ к текстовому содержимому узлов
+
+  // const allPcontent = [];
+  // $('.images-ex2').contents().css('color', 'violet');
+
+	// $().next() - получить доступ к следующему элементу, который(ые) идут за элементами из выборки
+
+	// $('.listOfQ li:eq(2)').next().css('color', 'violet');
+
+  // $().nextAll() - получить доступ ко всем следующим элементам, которые идут за элементом из выборки
+
+  // $('.listOfQ li:eq(2)').nextAll().css('color', 'violet');
+
+  // $().nextUntil('селектор') - получить доступ ко всем следующим элементам, которые идут за элементом из выборки
+
+  //$('.listOfQ li:eq(2)').nextUntil('#someLiID').css('color', 'green');
+
+  // prev(), prevAll(), prevUntil() - все тоже самое, что и выше, только в обратном смысле - т.е. ищет предыдущие элементы (соседи)
+
+	// siblings('условие_селектор') - ищет все соседние элементы, которые находятся на одном уровне
+
+  // $('.listOfQ li:eq(2)').siblings('[class]').css('color', 'green');
+
+	// $(...).text() - возвращает текстовое содержимое элементов выборки
+	// $(...).html() - установить текстовое значение элемента
+
+
+	// ЗАДАЧА
+	// создать в html 6 заголовков: 1 первого ур, 2 второго ур, 2 третьего ур
+	// вставить в них любой текст
+	// для заголовков 1го уровня через $ в конец добавить воскл знак
+	// для 2го уровня поменять цвет на зеленый
+	// для 3го уровня сделать подчеркнутый
+
+		// $('.example5').find(':header').each((index, item) => {
+		// 	if ($(item).is('h1')) {
+		// 	  const text = $(item).text();
+    //     $(item).html(`${ text }!`)
+		// 	} else if ($(item).is('h2')) {
+    //     $(item).css('color', 'green'); // .css('text-decoration', 'underline');
+    //     // $(item).css({color: 'green', textDecoration: 'underline' });
+		// 	} else if ($(item).is('h3')) {
+    //     $(item).css({textDecoration: 'underline' });
+		// 	}
+		// });
+
+		const h11 = $('.example5')
+			.find(':header')
+			.filter('h1')
+			.css('color', 'green')
+			.end()
+			.filter('h2')
+      .css('color', 'yellow')
+      .end()
+      .filter('h3')
+      .css('text-decoration', 'underline')
+
+
+  console.log('h1: ', h11);
+
+  // $('.example5 h1').each((index, item) => {
+  //     const text = $(item).text();
+  //     $(item).html(`${ text }!`)
+  // })
+
+
+	////// ЗАДАЧА
+	// 1) нужно выбрать все заголовки кроме тех, у которых есть css-классы zzz и ccc, далее покрасить их в красный цвет
+	// 2) обратиться к заголовку с классом zzz и затем обратиться к его родителю и у него сделать
+	// рамку пунктиром синим цветом + добавить паддинг 20px
+
+	console.log("ALL HEADERS", $('.example6 :header'))
+	$('.example6 :header').not('.ccc,.zzz').css('color', 'green');
+	// $('.example6 :header:not(.ccc,.zzz)').css('color', 'green');
+
+	$('.example6 .zzz').parent().css({padding: '20px', border: '2px dashed blue'});
+
+
+	//////// $(...).attr() = element.getAttribute() - получить значение атрибута элемента(ов)
+
+	// $(...).attr() - вызов без параметров -> считать значение атрибута
+	const attributeVal = $('.example6 .zzz').attr('data-id');
+	console.log("Значение атрибута: ", attributeVal)
+
+  // $(...).attr(name, value) - вызов с двумя параметрами -> установить значение для какого-то атрибута
+  const last= $('.example6 :last').attr('data-param', '100500');
+
+  // $(...).attr( { __object__ } ) - установить список атрибутов одним махом
+
+	$($('.example6 :header').get(3)).attr({ 'data-super-param': '100500', id: 'dataSuperParam', name: 'data-super-param' });
+  // console.log("Значение атрибута: ", $('.example6 :header').get(3))
+
+
+	///// removeAttr(_name_) - удалить атрибут
+
+
+
+	//////// ЗАДАЧА
+	/// Пробежаться по всему списку UL->LI и добавить порядковый номер пункта из списка
+	/// порядковый номер в виде текста, например: 1) и далее текст из пункта списка
+
+	// $('.markNumbers li').each((index, item) => {
+	// 	$(item).html(`${ index + 1 }) ${ item.innerText }`);
+	// });
+
+	$('.markNumbers li').each(function (index) {
+		// $(this).html(`${ index + 1 }) ${ this.innerText }`);
+		this.innerText = `${ index + 1 }) ${ this.innerText }`;
+	});
+
+
+	//////// $(...).wrap(); - обернуть выборку в нужный html-тег
+
+	$('.wrapEx span').wrap('<div></div>');
+
+	/////// $(...).unwrap(); - удалить тег (тег-обертку), который оборачивает текущий из выборки
+
+  $('.wrapEx > div > span').unwrap();
+
+  ///////// $(...).before('текст') - добавить элемент ДО выборки
+  ///////// $(...).after('текст') - добавить элемент ПОСЛЕ выборки
+
+
+
+</script>
+
+<script src="/js/utils.js"></script>
+
+</body>
+</html>

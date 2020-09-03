@@ -1,0 +1,50 @@
+* {
+	box-sizing: border-box;
+}
+.carousel {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+
+
+.carousel__container {
+	width: 600px;
+	overflow: hidden;
+	position: relative;
+	border: 1px solid red;
+}
+
+.carousel__list {
+	list-style: none;
+	width: 10000px;
+	padding: 0;
+	position: relative;
+}
+
+.carousel__item {
+	display: inline-block;
+	padding: 0;
+}
+
+.fa-arrow-left, .fa-arrow-right {
+	position: absolute;
+	font-size: 30px;
+	top: calc(50% - 20px);
+	opacity: 0.7;
+	cursor: pointer;
+	background-color: #efefef;
+}
+
+.fa-arrow-left:hover, .fa-arrow-right:hover {
+	opacity: 0.8;
+}
+
+.fa-arrow-left{
+	left: 10px;
+}
+.fa-arrow-right{
+	right: 10px;
+}

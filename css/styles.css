@@ -1,0 +1,77 @@
+body {
+	font: 120% Verdana, Tahoma, sans-serif;
+	color: #333333;
+}
+.box {
+	border:1px solid #ccc;
+	border-radius:4px;
+	box-shadow:0 0 2px #ccc;
+}
+
+h1,h2 {
+	color: #ff6600;
+}
+
+#content {
+	margin: 30px auto;
+	width: 600px;
+}
+
+.imageZoomInZoomOut {
+    margin: 30px auto;
+	width: 600px;
+}
+
+.super-red {
+	color: #ff0000;
+}
+.decorate {
+	text-decoration: underline;
+}
+.kitty {
+	cursor: pointer;
+	border: 1px solid red;
+	padding: 10px;
+	width: 350px;
+}
+
+.goToTop {
+	position: fixed;
+	bottom: 50px;
+	right: 20px;
+	font-size: 50px;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.fleeingMouse {
+    margin: 30px auto;
+    width: 50px;
+    height: 50px;
+    border: 2px solid darkblue;
+}
+
+.bgcolor1{
+	background-color: #efefef;
+}
+
+.colT {
+	background-color: #efefef;
+	border: 1px solid #afafaf;
+	margin: 40px;
+	padding: 20px;
+}
+
+.checkboxContainer{
+	margin: 100px;
+}
+
+.green__header {
+	color: greenyellow;
+	text-decoration: underline;
+}
+
+.blue__header {
+	color: dodgerblue;
+	text-decoration: underline;
+}
